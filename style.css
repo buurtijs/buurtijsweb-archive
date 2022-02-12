@@ -19,7 +19,10 @@ html, body {
 
 }
 
-
+* {
+  font-family: HERAHUGHES, regular;
+  color: white;
+}
 
 canvas {
   display: block;

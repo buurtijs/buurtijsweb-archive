@@ -3,7 +3,9 @@ html, body {
   padding: 0;
   @font-face {
       font-family: 'HERAHUGHES';
-      src: local('HERAHUGHES'), url('./fonts/HERAHUGHES/HERAHUGHES.ttf') format('truetype');
+      src: local('HERAHUGHES'), url('https://github.com/buurtijs/buurtijsweb-archive/blob/main/font/HERAHUGHES.ttf') format('truetype'),
+      url('./font/herahughes-webfont.woff2') format('woff2'),
+      url('./font/herahughes-webfont.woff') format('woff');
   }
 
   font-family: HERAHUGHES, regular;

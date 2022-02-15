@@ -20,7 +20,7 @@ var a;
 
 
 function preload (){
-  bike2 = loadImage ("images/bike2.png");
+  bike2 = loadImage ("images/bike2-s.png");
 }
 
 function setup() {

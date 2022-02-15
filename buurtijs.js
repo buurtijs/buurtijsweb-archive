@@ -7,7 +7,7 @@ let xspeed;
 let yspeed;
 
 
-let bike2
+let bike2;
 let bikeX;
 
 let s;

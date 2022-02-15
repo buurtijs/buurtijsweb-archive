@@ -17,6 +17,10 @@ let textY;
 let cnv;
 
 
+function preload (){
+  bike2 = loadImage ("images/Bike2-s.png");
+}
+
 function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
   // cnv.position(0,0)
@@ -29,15 +33,9 @@ function setup() {
  textX = 0.20*windowWidth;
  textY = 0.30*windowHeight;
  sSize = 25;
-
-}
-
-function preload (){
-  bike2 = loadImage ("images/Bike2-s.png");
 }
 
 function draw() {
-  // DONT FORGET TO COMMENT BACKGROUND BACK IN
 background (33, 33, 33);
 fill('white');
 textAlign(CENTER)

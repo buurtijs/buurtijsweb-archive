@@ -16,26 +16,24 @@ let textX;
 let textY;
 let cnv;
 
-var a;
-
-
-function preload (){
-  bike2 = loadImage ("images/bike2-s.png");
-}
 
 function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
   // cnv.position(0,0)
-  x= random(windowWidth)
-  y= random(windowHeight)
+  x= random(width)
+  y= random(height)
   xspeed = 3;
   yspeed = 3;
   bikeX = windowWidth/6;
  s = ('BUURTIJS is collaborative research project instigated by Honey Jones-Hughes and Antonio de la Hera exploring and mapping the production, processing and distribution of edible produce within and surrounding the city of Rotterdam. It evolved from a self-imposed challenge to make ice cream only from ingredients collected by bike, directly from the source. Out of this challenge a body of research related to food production emerged, tracking attempts to locate the most ‘ethical’ producers, with questions of sustainability, local resources, and regenerative agriculture.');
- textX = 0.20*windowWidth
- textY = 0.30*windowHeight
- sSize = 25
+ textX = 0.20*windowWidth;
+ textY = 0.30*windowHeight;
+ sSize = 25;
 
+}
+
+function preload (){
+  bike2 = loadImage ("images/Bike2-s.png");
 }
 
 function draw() {

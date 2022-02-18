@@ -1,7 +1,12 @@
-// Changing the website's <title>
 document.title = "BUURTIJS";
 
 let cnv;
+
+let mobBr = 580;
+var banBack;
+let mobBan= 'IMPORTANT ANNOUNCEMENT: WE ARE STILL WORKING ON OUR MOBILE SITE - FOR THE FULL EXPERIENCE PLEASE LOOK ON A MUCH LARGER SCREEN :)';
+let banX;
+let banSpeed = 2;
 
 let layer1;
 let layer2;
@@ -33,29 +38,30 @@ let buttonX = 50;
 let buttonY = 100;
 let buttonDist = 40;
 let bttnSize = 30; //diameter of the button/switch
+// button border
 let buttBor = 6
-let rectX= 32 //buttonX minus half (buttonDist+buttBor)
+var rectX; //buttonX minus half (buttonDist+buttBor)
 
 // our 8 boos
 let switchOn = false,
-switchText = 'ON'; //initial text to display on the button
+switchText = 'OFF'; //initial text to display on the button
 let switchOn2 = false,
-switchText2 = 'ON'; //initial text to display on the button
+switchText2 = 'OFF'; //initial text to display on the button
 let switchOn3 = false,
-switchText3 = 'ON'; //initial text to display on the button
+switchText3 = 'OFF'; //initial text to display on the button
 let switchOn4 = false,
-switchText4 = 'ON'; //initial text to display on the button
+switchText4 = 'OFF'; //initial text to display on the button
 let switchOn5 = false,
-switchText5 = 'ON'; //initial text to display on the button
+switchText5 = 'OFF'; //initial text to display on the button
 let switchOn6 = false,
-switchText6 = 'ON'; //initial text to display on the button
+switchText6 = 'OFF'; //initial text to display on the button
 let switchOn7 = false,
-switchText7 = 'ON'; //initial text to display on the button
+switchText7 = 'OFF'; //initial text to display on the button
 let switchOn8 = false,
-switchText8 = 'ON'; //initial text to display on the button
+switchText8 = 'OFF'; //initial text to display on the button
 
 // scale factor
-let sf = 100;
+var sf;
 
 // zoom button coordinates
 let zoomX;
@@ -108,16 +114,54 @@ layer8.addClass('layerClass')
 layer82.addClass('layerClass')
 layer83.addClass('layerClass')
 
+banX = windowWidth;
+
+if (windowWidth <= mobBr) {
+buttonX = -50;
+  zoomX = -50;
+  leftX = -50;
+  rightX = -50;
+  rectX= -50;
+  sf = 550;
+  banBack = windowHeight-50;
+}
+  else if (windowWidth >= mobBr) {
+    buttonX = 50;
+      zoomX = windowWidth-50;
+      leftX = zoomX-13;
+      rightX = zoomX+13;
+      rectX = 32;
+      sf = 100;
+      banBack = windowHeight;
+  }
+
 }
 
 function draw() {
-  // edit canvas out to make clear back, buttons, can be absolute over image?
-  // background(33, 33, 33);
 
-  // zoom buttons x positions, to change with screen size changes
- zoomX= windowWidth-50;
-   leftX = zoomX-13;
-   rightX = zoomX+13;
+  // zoom buttons x positions, to change with screen size changes, also with mob break point
+  if (windowWidth <= mobBr) {
+  buttonX = -50;
+    zoomX = -50;
+    leftX = -50;
+    rightX = -50;
+      rectX= -50;
+        banX = banX - banSpeed
+        banBack = windowHeight-50;
+  }
+    else if (windowWidth >= mobBr) {
+      buttonX = 50;
+        zoomX = windowWidth-50;
+        leftX = zoomX-13;
+        rightX = zoomX+13;
+        rectX = 32;
+          banX = windowWidth
+          banBack = windowHeight;
+    }
+
+    if (banX <=-2610){
+      banX = windowWidth;
+    }
 
 // layer positions
 layer1.position(layerX,layerY);
@@ -158,67 +202,67 @@ layer83.style('width', sf+"%");
 
   if (switchOn) {
                       layer1Vis = (0); //if the state of the switch is 'On', initiate background color change
-                      switchText = 'OFF';
+                      switchText = 'ON';
                     } else {
                       layer1Vis = 1; //if the state of the switch is not 'On', make background dark
-                      switchText = 'ON';
+                      switchText = 'OFF';
                     }
 
   if (switchOn2) {
     layer2Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText2 = 'OFF';
+    switchText2 = 'ON';
   } else {
     layer2Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText2 = 'ON';
+    switchText2 = 'OFF';
   }
   if (switchOn3) {
       layer3Vis = (0); //if the state of the switch is 'On', initiate background color change
-      switchText3 = 'OFF';
+      switchText3 = 'ON';
     } else {
       layer3Vis = 1; //if the state of the switch is not 'On', make background dark
-      switchText3 = 'ON';
+      switchText3 = 'OFF';
     }
   if (switchOn4) {
     layer4Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText4 = 'OFF';
+    switchText4 = 'ON';
   } else {
     layer4Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText4 = 'ON';
+    switchText4 = 'OFF';
   }
   if (switchOn5) {
     layer5Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText5 = 'OFF';
+    switchText5 = 'ON';
   } else {
     layer5Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText5 = 'ON';
+    switchText5 = 'OFF';
   }
   if (switchOn6) {
     layer6Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText6 = 'OFF';
+    switchText6 = 'ON';
   } else {
     layer6Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText6 = 'ON';
+    switchText6 = 'OFF';
   }
 if (switchOn7) {
     layer7Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText7 = 'OFF';
+    switchText7 = 'ON';
   } else {
     layer7Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText7 = 'ON';
+    switchText7 = 'OFF';
   }
 
   // FIX LAYER 8 !!!!!!
   if (switchOn8) {
     layer8Vis = (0); //if the state of the switch is 'On', initiate background color change
     layer82Vis = (0);
-    switchText8 = 'OFF';
+    switchText8 = 'ON';
   } else {
     layer8Vis = 1; //if the state of the switch is not 'On', make background dark
     layer82Vis = (0.85);
-    switchText8 = 'ON';
+    switchText8 = 'OFF';
   }
 
-// background to on off buttonDist, and direction buttons
+// background/borders for on off buttonDist, and direction buttons
   scale(1);
   noStroke();
   fill (56);
@@ -323,12 +367,19 @@ if (switchOn7) {
   text('<', leftX, lrY)
   text('>', rightX,lrY)
 
+// mobile banner for the time being, because we don't have time to develop the web version proper :(
+
+rect (0,banBack, windowWidth, 50)
+fill ("#C9C8C9");
+textSize (50)
+textAlign (LEFT, TOP)
+text(mobBan, banX, windowHeight-50)
 }
 
 function windowResized() {
 resizeCanvas(windowWidth, windowHeight);
-}
 
+}
 
 
 
@@ -389,16 +440,16 @@ let distanceRight = dist(mouseX, mouseY, rightX, lrY);
 
               // move controls
                 if (distanceUp <= bttnSize / 2) {
-                   layerY=layerY-mf
-                  }
-                if (distanceDown <= bttnSize / 2) {
                    layerY=layerY+mf
                   }
+                if (distanceDown <= bttnSize / 2) {
+                   layerY=layerY-mf
+                  }
                 if (distanceLeft <= bttnSize / 2) {
-                   layerX=layerX-mf
+                   layerX=layerX+mf
                   }
                 if (distanceRight <= bttnSize / 2) {
-                   layerX=layerX+mf
+                   layerX=layerX-mf
                   }
 
   }
@@ -407,13 +458,13 @@ let distanceRight = dist(mouseX, mouseY, rightX, lrY);
 // to allow movement with the arrows
   function keyPressed() {
   if (keyCode === LEFT_ARROW) {
-    layerX=layerX-mf;
-  } else if (keyCode === RIGHT_ARROW) {
     layerX=layerX+mf;
+  } else if (keyCode === RIGHT_ARROW) {
+    layerX=layerX-mf;
   }else if (keyCode === UP_ARROW) {
-    layerY=layerY-mf;
-  }else if (keyCode === DOWN_ARROW) {
     layerY=layerY+mf;
+  }else if (keyCode === DOWN_ARROW) {
+    layerY=layerY-mf;
   }
 }
 

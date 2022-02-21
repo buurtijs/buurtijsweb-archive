@@ -44,21 +44,21 @@ var rectX; //buttonX minus half (buttonDist+buttBor)
 
 // our 8 boos
 let switchOn = false,
-switchText = 'OFF'; //initial text to display on the button
+switchText = 'ON'; //initial text to display on the button
 let switchOn2 = false,
-switchText2 = 'OFF'; //initial text to display on the button
+switchText2 = 'ON'; //initial text to display on the button
 let switchOn3 = false,
-switchText3 = 'OFF'; //initial text to display on the button
+switchText3 = 'ON'; //initial text to display on the button
 let switchOn4 = false,
-switchText4 = 'OFF'; //initial text to display on the button
+switchText4 = 'ON'; //initial text to display on the button
 let switchOn5 = false,
-switchText5 = 'OFF'; //initial text to display on the button
+switchText5 = 'ON'; //initial text to display on the button
 let switchOn6 = false,
-switchText6 = 'OFF'; //initial text to display on the button
+switchText6 = 'ON'; //initial text to display on the button
 let switchOn7 = false,
-switchText7 = 'OFF'; //initial text to display on the button
+switchText7 = 'ON'; //initial text to display on the button
 let switchOn8 = false,
-switchText8 = 'OFF'; //initial text to display on the button
+switchText8 = 'ON'; //initial text to display on the button
 
 // scale factor
 var sf;
@@ -135,7 +135,13 @@ buttonX = -50;
       banBack = windowHeight;
   }
 
+
+//   layer1Button = createButton ("1")
+// layer1Button.mouseClicked(butL1)
+
 }
+
+
 
 function draw() {
 
@@ -202,64 +208,62 @@ layer83.style('width', sf+"%");
 
   if (switchOn) {
                       layer1Vis = (0); //if the state of the switch is 'On', initiate background color change
-                      switchText = 'ON';
+                      switchText = 'OFF';
                     } else {
                       layer1Vis = 1; //if the state of the switch is not 'On', make background dark
-                      switchText = 'OFF';
+                      switchText = 'ON';
                     }
 
   if (switchOn2) {
     layer2Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText2 = 'ON';
+    switchText2 = 'OFF';
   } else {
     layer2Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText2 = 'OFF';
+    switchText2 = 'ON';
   }
   if (switchOn3) {
       layer3Vis = (0); //if the state of the switch is 'On', initiate background color change
-      switchText3 = 'ON';
+      switchText3 = 'OFF';
     } else {
       layer3Vis = 1; //if the state of the switch is not 'On', make background dark
-      switchText3 = 'OFF';
+      switchText3 = 'ON';
     }
   if (switchOn4) {
     layer4Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText4 = 'ON';
+    switchText4 = 'OFF';
   } else {
     layer4Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText4 = 'OFF';
+    switchText4 = 'ON';
   }
   if (switchOn5) {
     layer5Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText5 = 'ON';
+    switchText5 = 'OFF';
   } else {
     layer5Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText5 = 'OFF';
+    switchText5 = 'ON';
   }
   if (switchOn6) {
     layer6Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText6 = 'ON';
+    switchText6 = 'OFF';
   } else {
     layer6Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText6 = 'OFF';
+    switchText6 = 'ON';
   }
 if (switchOn7) {
     layer7Vis = (0); //if the state of the switch is 'On', initiate background color change
-    switchText7 = 'ON';
+    switchText7 = 'OFF';
   } else {
     layer7Vis = 1; //if the state of the switch is not 'On', make background dark
-    switchText7 = 'OFF';
+    switchText7 = 'ON';
   }
-
-  // FIX LAYER 8 !!!!!!
   if (switchOn8) {
     layer8Vis = (0); //if the state of the switch is 'On', initiate background color change
     layer82Vis = (0);
-    switchText8 = 'ON';
+    switchText8 = 'OFF';
   } else {
     layer8Vis = 1; //if the state of the switch is not 'On', make background dark
     layer82Vis = (0.85);
-    switchText8 = 'OFF';
+    switchText8 = 'ON';
   }
 
 // background/borders for on off buttonDist, and direction buttons
@@ -453,6 +457,17 @@ let distanceRight = dist(mouseX, mouseY, rightX, lrY);
                   }
 
   }
+
+
+  // function butL1() {
+  //  if (layer1Vis === 1) {
+  //   layer1Vis = 0;
+  //   switchOn = !switchOn;
+  // } else {
+  //   layer1Vis = 1;
+  //   switchOn = !switchOn;
+  // }
+  // }
 
 
 // to allow movement with the arrows

@@ -36,6 +36,16 @@ button {
 }
 
 
+img{
+  z-index:3;
+  padding:3%;
+}
+
+a, h1, p {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 @media only screen and (max-width: 600px) {
   button {
     position: fixed;
@@ -51,6 +61,7 @@ button {
     overflow-x: hidden;
       overflow-y: hidden;
   }
+
 
 }
 
@@ -70,4 +81,8 @@ canvas {
   transform: translate(-50%, -50%);
   position:absolute;
   z-index:1;
+}
+
+#wage {
+  background-color: red;
 }

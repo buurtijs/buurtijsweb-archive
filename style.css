@@ -122,17 +122,17 @@ color: rgba(33, 33, 33, 1);
 }
 
 .solidaritypopHide {
-  width:0px;
-  overflow: hidden;
-text-overflow: clip;
+  font-size: 0px;
 }
 
 .solidaritypop {
   position: fixed;
-  top: 200px;
+  top: 10%;
   left: 2%;
   width: 95%;
+  max-height: 80%;
   background: #16A86D;
+  overflow-y: scroll;
 
   /* Below is the green bubble draft */
   /* background: url("./images/green-blob.png");

@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUURTIJS</title>
   <style>
-    body {
+    html, body {
       padding: 0;
       margin: 0;
-      overflow: scroll;
+      overflow-y: scroll !important;
 }
-    }
   </style>
   <script src="./p5.js"></script>
   <!-- <script src="../addons/p5.sound.js"></script> -->
@@ -27,35 +26,20 @@
   <p>Under this model of solidarity payments we are not selling you a product. We are selling you our labour, our time. You get to decide what our hourly wage should be.</p>
 
 
-<table style="margin-left:auto; margin-right: auto;">
-	<tr>
-		<td span id="whatsolidarity" class="leftalign">
-      <!-- <a style="color:#EFA0BF;
-    border: 1px solid #EFA0BF;
-    padding: 4px;
-    padding-top: 6px;"
-  href="./what-is-solidarity.html">WHAT IS A SOLIDARITY PAYMENT?</a>
-		-->
-<p style="color:#EFA0BF;
-border: 1px solid #EFA0BF;
-padding: 4px;
-padding-top: 6px;"> WHAT IS A SOLIDARITY PAYMENT? </p>
-
-  </td>
-		<td style="width:6%">
-		</td>
-		<td>
-      <a style="color:#77CDEE;
-      border: 1px solid #77CDEE;
-      padding: 4px;
-      padding-top:6px;"
-      href= "https://docs.google.com/spreadsheets/d/1DpQc8IHLazLcDTcHDrG4l4dwh6mZvbtfvUJ0GMAcwlI/edit?usp=sharing">OUR BUDGET</a>
-		</td>
-	</tr>
-</table>
+<div style="max-width: 600px">
+<div class="twobuttongrid">
+  <div class="twobuttonitem"></div>
+<div span id="whatsolidarity" class="twobuttonitem1"><button class="solidarity" span id="whatsolidarity" type="button" onclick="alert('Hello world!')">WHAT IS SOLIDARITY</button></div>
+<!-- <div span id="whatsolidarity" class="twobuttonitem1"> WHAT IS A SOLIDARITY PAYMENT?</div> -->
+<div class="twobuttonitem"></div>
+<div class="twobuttonitem2"><a class="budget" href= "https://docs.google.com/spreadsheets/d/1DpQc8IHLazLcDTcHDrG4l4dwh6mZvbtfvUJ0GMAcwlI/edit?usp=sharing">OUR BUDGET</a></div>
+<div class="twobuttonitem"></div>
+</div>
+<div>
 
 
-  <p>What wage* do you want to give to us? You should base this on your own wage. Meaning that if you earn €10.91** an hour, then you can pay us an hourly wage of €10.91. But if you earn €80 an hour, then you can pay us an hourly wage of €80.<br><br>We've made a wage calculator to help you calculate the solidarity payment:</p>
+
+<p>What wage* do you want to give to us? You should base this on your own wage. Meaning that if you earn €10.91** an hour, then you can pay us an hourly wage of €10.91. But if you earn €80 an hour, then you can pay us an hourly wage of €80.<br><br>We've made a wage calculator to help you calculate the solidarity payment:</p>
 
 <div id="paymentbox"><p class="paymenttext">The wage you will give us: <br> €<span id="wage" contenteditable="true">...</span>/hr</p>
   <p class="paymenttext">1 tub = 15 mins = €<span id="onetub">...</span> <br> 2 tubs = 30 mins = €<span id="twotub">...</span> <br> 3 tubs = 45 mins = €<span id="threetub">...</span> <br> <span id="xtubs" contenteditable>?</span> tubs = <span id="tubmins"> ?</span> mins = € <span id="xtub">...</span> <br></p>
@@ -70,7 +54,7 @@ padding-top: 6px;"> WHAT IS A SOLIDARITY PAYMENT? </p>
 
 
 
-<div span id ="solidText" class="solidaritypopHide">
+<div span id ="solidText" class="solidaritypopHide" style="max-width: 600px">
   <div class="sp-grid-item1"><h1>WHAT IS A SOLIDARITY PAYMENT?</h1></div>
   <div span id="solidClose" class="sp-grid-item"><h1 style="color: rgb(33,33,33);">X</h1></div>
   <div class="sp-grid-item3">

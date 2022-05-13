@@ -120,3 +120,16 @@ color: rgba(33, 33, 33, 1);
   background-repeat: no-repeat;
  background-size: 100% 100%;
 }
+
+.solidaritypopHide {
+  width:0px;
+  overflow: hidden;
+text-overflow: clip;
+}
+
+.solidaritypop {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  background: green;
+}

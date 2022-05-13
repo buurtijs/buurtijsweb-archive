@@ -3,13 +3,22 @@ document.title = "BUURTIJS - Solidarity Payment";
 let cnv;
 var wage;
 var xTubs;
+var solidaritySwitch
+let solidText;
 
 function setup() {
-  cnv = createCanvas(windowWidth, 400);
+  cnv = createCanvas(10, 10);
   wage = select('#wage');
   wage.input(updatePayments);
   xTubs = select('#xtubs')
   xTubs.input(updatePayments)
+
+  solidaritySwitch = select('#whatsolidarity')
+  solidaritySwitch.mousePressed(changeClass);
+
+solidText = select('#solidText')
+solidText.mousePressed(changeBack)
+
 }
 
 function draw() {
@@ -31,4 +40,12 @@ priceX = wage.html() * xTubs.html() / 4;
 
     function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function changeClass () {
+  select('#solidText').class('solidaritypop')
+}
+
+function changeBack () {
+  select('#solidText').class('solidaritypopHide')
 }

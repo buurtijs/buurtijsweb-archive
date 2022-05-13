@@ -10,9 +10,11 @@ let solidClose;
 function setup() {
   cnv = createCanvas(10, 10);
   wage = select('#wage');
+  wage.mousePressed(clearWage);
   wage.input(updatePayments);
-  xTubs = select('#xtubs')
-  xTubs.input(updatePayments)
+  xTubs = select('#xtubs');
+  xTubs.input(updatePayments);
+  xTubs.mousePressed(clearTubs);
 
   solidaritySwitch = select('#whatsolidarity')
   solidaritySwitch.mousePressed(changeClass);
@@ -43,6 +45,14 @@ priceX = wage.html() * xTubs.html() / 4;
 
     function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function clearWage() {
+  wage.html('');
+}
+
+function clearTubs() {
+  xTubs.html('');
 }
 
 function changeClass () {

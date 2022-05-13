@@ -130,6 +130,13 @@ text-overflow: clip;
 .solidaritypop {
   position: fixed;
   top: 200px;
-  left: 0;
-  background: green;
+  left: 2%;
+  width: 95%;
+  background: #16A86D;
+
+  /* Below is the green bubble draft */
+  /* background: url("./images/green-blob.png");
+  background-repeat: no-repeat;
+ background-size: 100% 100%;
+   padding: 20px; */
 }

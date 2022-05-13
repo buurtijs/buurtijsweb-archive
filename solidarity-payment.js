@@ -5,6 +5,7 @@ var wage;
 var xTubs;
 var solidaritySwitch
 let solidText;
+let solidClose;
 
 function setup() {
   cnv = createCanvas(10, 10);
@@ -16,8 +17,10 @@ function setup() {
   solidaritySwitch = select('#whatsolidarity')
   solidaritySwitch.mousePressed(changeClass);
 
-solidText = select('#solidText')
-solidText.mousePressed(changeBack)
+solidClose = select('#solidClose')
+solidClose.mousePressed(changeBack)
+
+// solidClose = select('#solidClose')
 
 }
 

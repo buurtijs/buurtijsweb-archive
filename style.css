@@ -16,8 +16,8 @@ html, body {
   background-color: rgba(33, 33, 33, 1);
   width: 100vw;
   max-width: 100vw !important;
-  overflow-x: hidden;
-    overflow-y: hidden;
+  /* overflow-x: hidden;
+    overflow-y: hidden; */
 
 }
 
@@ -125,6 +125,8 @@ color: rgba(33, 33, 33, 1);
 }
 
 .solidaritypop {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   position: fixed;
   top: 10%;
   left: 2%;
@@ -133,9 +135,25 @@ color: rgba(33, 33, 33, 1);
   background: #16A86D;
   overflow-y: scroll;
 
+
   /* Below is the green bubble draft */
   /* background: url("./images/green-blob.png");
   background-repeat: no-repeat;
  background-size: 100% 100%;
    padding: 20px; */
 }
+
+.sp-grid-item {
+text-align: center;
+}
+
+.sp-grid-item1 {
+grid-column: 1 / 5;
+  }
+
+.sp-grid-item3 {
+grid-column: 1 / 6;
+padding-left: 3%;
+padding-right: 3%;
+padding-bottom: 3%;
+  }

@@ -1,6 +1,5 @@
 document.title = "BUURTIJS - Solidarity Payment";
 
-let cnv;
 var wage;
 var xTubs;
 var solidaritySwitch
@@ -8,7 +7,7 @@ let solidText;
 let solidClose;
 
 function setup() {
-  cnv = createCanvas(10, 10);
+  noCanvas()
   wage = select('#wage');
   wage.mousePressed(clearWage);
   wage.input(updatePayments);

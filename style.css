@@ -81,21 +81,16 @@ text-align: center;
 .twobuttonitem1 {
 text-align: center;
 border: 1px solid #EFA0BF;
+color:#EFA0BF;
+padding: 4px;
+padding-top: 6px;
+
 }
 .twobuttonitem2 {
 text-align: center;
 border: 1px solid #77CDEE;
 padding: 4px;
 padding-top:6px;
-}
-
-button.solidarity{
-  text-align: center;
-color:#EFA0BF;
-border: none;
-background: none;
-padding: 4px;
-padding-top: 6px;
 }
 
 a.budget {

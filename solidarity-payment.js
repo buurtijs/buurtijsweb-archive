@@ -15,6 +15,13 @@ function setup() {
   xTubs.input(updatePayments);
   xTubs.mousePressed(clearTubs);
 
+yourWage = select('#yourWage')
+  monthSalary = select('#monthSalary');
+  weekHours = select('#weekHours');
+  monthSalary.input(updateSalary);
+  monthSalary.mousePressed(clearmonthSalary);
+  weekHours.input(updateSalary);
+
   solidaritySwitch = select('#whatsolidarity')
   solidaritySwitch.mousePressed(changeClass);
 
@@ -42,6 +49,11 @@ priceX = wage.html() * xTubs.html() / 4;
   select('#xtub').html(priceX);
 }
 
+function updateSalary(){
+yourhourWage = [monthSalary.html()*12] / [weekHours.html()*52];
+  select('#yourwage').html(yourhourWage);
+}
+
     function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
@@ -52,6 +64,10 @@ function clearWage() {
 
 function clearTubs() {
   xTubs.html('');
+}
+
+function clearmonthSalary() {
+  monthSalary.html('');
 }
 
 function changeClass () {

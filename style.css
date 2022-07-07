@@ -98,7 +98,7 @@ a.budget {
   text-decoration: none;
 }
 
-#wage, #xtubs {
+#wage, #xtubs, #weekHours, #monthSalary  {
   background-color: rgba(250,250,250,0.9);
   border: 1px dotted red;
   padding: 3px;
@@ -109,7 +109,7 @@ color: rgba(33, 33, 33, 1);
  background-size: 100% 100%; */
 }
 
-#tubmins, #onetub, #twotub, #threetub, #xtub {
+#tubmins, #onetub, #twotub, #threetub, #xtub, #yourwage {
   color: rgba(33,33,33,1);
 }
 
@@ -124,6 +124,16 @@ color: rgba(33, 33, 33, 1);
   height: 190px;
     padding: 20px;
   background: url("./images/yellow blob.png");
+  background-repeat: no-repeat;
+ background-size: 100% 100%;
+}
+
+#salarybox {
+  width: 230px;
+  margin-left: 10px;
+  height: 140px;
+    padding: 20px;
+  background: url("./images/green-blob.png");
   background-repeat: no-repeat;
  background-size: 100% 100%;
 }

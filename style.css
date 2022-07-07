@@ -68,6 +68,23 @@ canvas {
   z-index:1;
 }
 
+#contact{
+  position:absolute;
+  bottom: 0px;
+ right: 0;
+ z-index:3;
+ padding: 13px;
+  color: #FAF057;
+  font-size: 18px;
+
+}
+
+@media only screen and (max-width: 600px) {
+#contact{
+    bottom: 50px;
+}
+}
+
 /* below styles for solidarity payments */
 
 .twobuttongrid {

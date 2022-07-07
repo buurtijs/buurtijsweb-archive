@@ -78,6 +78,13 @@ let mf = 35;
 
 function setup() {
 cnv = createCanvas(windowWidth, windowHeight);
+
+// our contact box button
+ //  contactSwitch = select('#contact');
+ //  contactSwitch.mousePressed(changeClass);
+ // contactClose = select('#solidClose');
+ //  solidClose.mousePressed(changeBack);
+
 layerX= windowWidth/2;
 layerY= windowHeight/2;
 // all the layers in their starting position
@@ -134,10 +141,6 @@ buttonX = -50;
       sf = 100;
       banBack = windowHeight;
   }
-
-
-//   layer1Button = createButton ("1")
-// layer1Button.mouseClicked(butL1)
 
 }
 
@@ -495,3 +498,12 @@ function doubleClicked() {
     else
       sf *= 0.95;
   });
+
+// fucntions to open contact box
+  // function changeClass () {
+  //   select('#solidText').class('solidaritypop')
+  // }
+  //
+  // function changeBack () {
+  //   select('#solidText').class('solidaritypopHide')
+  // }
